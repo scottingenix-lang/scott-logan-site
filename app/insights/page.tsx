@@ -12,6 +12,7 @@ const episodes = [
   {
     guest: "Chris Walker",
     image: "/Chris Walker.avif",
+    spotifyUrl: "https://open.spotify.com/episode/3ds1HArBSJLrFCLKlr6qej",
     title: "Demand Gen Is Broken — And What Actually Replaces It",
     summary:
       "Traditional demand gen models are failing B2B companies. Chris Walker breaks down why MQL-based thinking creates misalignment between marketing activity and revenue outcomes, and what buyer-centric, influence-first marketing looks like when done right.",
@@ -22,6 +23,7 @@ const episodes = [
   {
     guest: "Jay Baer",
     image: "/JayBaer-JustinKeller.avif",
+    spotifyUrl: "https://open.spotify.com/episode/0DQj5M4nRZ4gVakk8gjLah",
     title: "Speed, Differentiation, and Why Most Marketing Gets Ignored",
     summary:
       "In a world where everyone is doing incremental improvements to the same playbooks, Jay Baer argues that the only path to real marketing impact is genuine differentiation—and that speed of response is itself a competitive advantage few companies are exploiting.",
@@ -32,6 +34,7 @@ const episodes = [
   {
     guest: "Tim Davidson",
     image: "/TimDavidson.avif",
+    spotifyUrl: "https://open.spotify.com/episode/1swT8bMvAbI74ZeRwSKB1O",
     title: "What Actually Drives Pipeline in Modern B2B",
     summary:
       "Pipeline isn't the output of a single campaign or channel—it's the result of integrated systems that connect every marketing touchpoint to a revenue outcome. Tim Davidson shares how the best GTM teams are thinking about this and why siloed campaign thinking is holding most companies back.",
@@ -213,7 +216,7 @@ export default function InsightsPage() {
             {episodes.map((ep, i) => (
               <a
                 key={i}
-                href="https://open.spotify.com/show/1OsJDdLyEmgmhoaMnglBal"
+                href={ep.spotifyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ textDecoration: "none" }}
@@ -229,17 +232,38 @@ export default function InsightsPage() {
                     gridTemplateColumns: "300px 1fr",
                   }}
                 >
-                  {/* Thumbnail */}
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={ep.image}
-                    alt={ep.guest}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      display: "block",
-                    }}
-                  />
+                  {/* Thumbnail with play button overlay */}
+                  <div style={{ position: "relative" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={ep.image}
+                      alt={ep.guest}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        display: "block",
+                      }}
+                    />
+                    <div style={{
+                      position: "absolute",
+                      top: "50%",
+                      left: "50%",
+                      transform: "translate(-50%, -50%)",
+                      width: "56px",
+                      height: "56px",
+                      backgroundColor: accent,
+                      borderRadius: "50%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      boxShadow: "0 4px 16px rgba(0,0,0,0.35)",
+                    }}>
+                      <svg width="22" height="22" fill="white" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
 
                   {/* Content */}
                   <div style={{ padding: "28px 32px" }}>
