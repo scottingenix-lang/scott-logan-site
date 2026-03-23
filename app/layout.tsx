@@ -16,11 +16,20 @@ export const metadata: Metadata = {
     "18+ years driving revenue growth through ABM, AI-powered demand generation, and full-funnel pipeline systems. 165% YoY new logo growth. 10.5X pipeline ROI.",
   keywords:
     "B2B SaaS marketing, CMO, demand generation, ABM, pipeline generation, AEO, AI marketing, VP Marketing",
+  metadataBase: new URL("https://scott-logan-site.vercel.app"),
   openGraph: {
     title: "Scott Logan | B2B SaaS Marketing Leader",
     description:
       "CMO-level operator driving scalable revenue growth through ABM, AI-powered demand generation, and full-funnel pipeline systems.",
     type: "website",
+    images: [
+      {
+        url: "/headshot.png",
+        width: 1200,
+        height: 630,
+        alt: "Scott Logan — B2B SaaS Marketing Leader",
+      },
+    ],
   },
 };
 
