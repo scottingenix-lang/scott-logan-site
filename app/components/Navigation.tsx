@@ -69,7 +69,6 @@ export default function Navigation() {
         {/* Desktop Nav */}
         <nav
           style={{
-            display: "flex",
             alignItems: "center",
             gap: "6px",
           }}

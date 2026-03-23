@@ -27,6 +27,7 @@ body {
   color: #360f5a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* ── Floating card shadows ───────────────────────────────── */
