@@ -75,7 +75,7 @@ export default function InsightsPage() {
           padding: "72px 24px 64px",
         }}
       >
-        <div style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 340px", gap: "48px", alignItems: "center" }}>
+        <div className="insights-hero-grid" style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 340px", gap: "48px", alignItems: "center" }}>
           {/* Left: copy */}
           <div>
             <div

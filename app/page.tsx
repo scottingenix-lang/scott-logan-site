@@ -299,7 +299,7 @@ export default function HomePage() {
         boxShadow: "0 -1px 2px rgba(26,15,54,0.04), 0 -4px 12px rgba(26,15,54,0.07), 0 -16px 32px rgba(26,15,54,0.06)",
       }}>
         {/* Row 1: Background & experience */}
-        <div style={{ background: "radial-gradient(ellipse at 5% 50%, rgba(216,180,254,0.55) 0%, transparent 65%), radial-gradient(ellipse at 28% 90%, rgba(196,181,253,0.45) 0%, transparent 55%), radial-gradient(ellipse at 70% 30%, rgba(196,181,253,0.4) 0%, transparent 45%), radial-gradient(ellipse at 90% 80%, rgba(167,139,250,0.3) 0%, transparent 40%), #f8fafc", borderBottom: `1px solid rgba(139,92,246,0.25)`, height: "110px", overflow: "hidden" }}>
+        <div className="creds-row-1" style={{ background: "radial-gradient(ellipse at 5% 50%, rgba(216,180,254,0.55) 0%, transparent 65%), radial-gradient(ellipse at 28% 90%, rgba(196,181,253,0.45) 0%, transparent 55%), radial-gradient(ellipse at 70% 30%, rgba(196,181,253,0.4) 0%, transparent 45%), radial-gradient(ellipse at 90% 80%, rgba(167,139,250,0.3) 0%, transparent 40%), #f8fafc", borderBottom: `1px solid rgba(139,92,246,0.25)`, height: "110px", overflow: "hidden" }}>
           <div
             style={{
               display: "flex",
@@ -309,7 +309,7 @@ export default function HomePage() {
             }}
           >
             {/* Headshot */}
-            <div style={{ flex: "0 0 219px", width: "219px", backgroundColor: white, borderRight: `1px solid ${slate200}`, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", alignSelf: "stretch" }}>
+            <div className="creds-headshot-cell" style={{ flex: "0 0 219px", width: "219px", backgroundColor: white, borderRight: `1px solid ${slate200}`, display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden", alignSelf: "stretch" }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/Scott-Logan-Cartoon.png" alt="Scott Logan" style={{ height: "90px", width: "90px", objectFit: "cover", objectPosition: "top center", borderRadius: "50%", display: "block" }} />
             </div>
@@ -466,12 +466,12 @@ export default function HomePage() {
         </div>
 
         {/* Three evidence rows — alternating bleed panels */}
-        <div style={{ marginTop: "80px", overflow: "hidden" }}>
+        <div className="evidence-container" style={{ marginTop: "80px", overflow: "hidden" }}>
 
           {/* Row 1 — RIGHT panel (dark purple) */}
-          <div style={{ position: "relative", minHeight: "480px", display: "flex", alignItems: "center", marginBottom: "56px" }}>
+          <div className="evidence-row" style={{ position: "relative", minHeight: "480px", display: "flex", alignItems: "center", marginBottom: "56px" }}>
             {/* Text — left */}
-            <div style={{ flex: "0 0 36%", maxWidth: "460px", padding: "56px 52px 56px 0", zIndex: 1, position: "relative" }}>
+            <div className="evidence-text-left" style={{ flex: "0 0 36%", maxWidth: "460px", padding: "56px 52px 56px 0", zIndex: 1, position: "relative" }}>
               <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: accent, marginBottom: "14px" }}>AI Search Strategy</div>
               <h3 style={{ fontSize: "clamp(20px, 2.2vw, 26px)", fontWeight: 800, color: slate900, letterSpacing: "-0.03em", lineHeight: "1.25", marginBottom: "16px" }}>
                 Are You Adapting to<br />AI-Search Engines?
@@ -481,7 +481,7 @@ export default function HomePage() {
               </p>
             </div>
             {/* Panel — bleeds right */}
-            <div style={{
+            <div className="evidence-panel-r" style={{
               position: "absolute",
               left: "36%",
               top: 0,
@@ -500,9 +500,9 @@ export default function HomePage() {
           </div>
 
           {/* Row 2 — LEFT panel (orange) */}
-          <div style={{ position: "relative", minHeight: "480px", display: "flex", alignItems: "center", marginBottom: "56px" }}>
+          <div className="evidence-row" style={{ position: "relative", minHeight: "480px", display: "flex", alignItems: "center", marginBottom: "56px" }}>
             {/* Panel — bleeds left */}
-            <div style={{
+            <div className="evidence-panel-l" style={{
               position: "absolute",
               right: "36%",
               top: 0,
@@ -519,7 +519,7 @@ export default function HomePage() {
               <img src="/ABM-Engagement-Strategy.png" alt="ABM Engagement Strategy" style={{ width: "90%", borderRadius: "10px", boxShadow: "0 12px 40px rgba(0,0,0,0.35), 0 3px 8px rgba(0,0,0,0.2)", display: "block" }} />
             </div>
             {/* Text — right */}
-            <div style={{ marginLeft: "auto", flex: "0 0 36%", maxWidth: "460px", padding: "56px 0 56px 52px", zIndex: 1, position: "relative" }}>
+            <div className="evidence-text-right" style={{ marginLeft: "auto", flex: "0 0 36%", maxWidth: "460px", padding: "56px 0 56px 52px", zIndex: 1, position: "relative" }}>
               <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: accent, marginBottom: "14px" }}>ABM System</div>
               <h3 style={{ fontSize: "clamp(20px, 2.2vw, 26px)", fontWeight: 800, color: slate900, letterSpacing: "-0.03em", lineHeight: "1.25", marginBottom: "16px" }}>
                 Are Your ABM Playbooks Converting?
@@ -531,9 +531,9 @@ export default function HomePage() {
           </div>
 
           {/* Row 3 — RIGHT panel (dark gray) */}
-          <div style={{ position: "relative", minHeight: "480px", display: "flex", alignItems: "center" }}>
+          <div className="evidence-row" style={{ position: "relative", minHeight: "480px", display: "flex", alignItems: "center" }}>
             {/* Text — left */}
-            <div style={{ flex: "0 0 36%", maxWidth: "460px", padding: "56px 52px 56px 0", zIndex: 1, position: "relative" }}>
+            <div className="evidence-text-left" style={{ flex: "0 0 36%", maxWidth: "460px", padding: "56px 52px 56px 0", zIndex: 1, position: "relative" }}>
               <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: accent, marginBottom: "14px" }}>Pipeline Attribution</div>
               <h3 style={{ fontSize: "clamp(20px, 2.2vw, 26px)", fontWeight: 800, color: slate900, letterSpacing: "-0.03em", lineHeight: "1.25", marginBottom: "16px" }}>
                 Do You Know Which Channels Drive the Most Revenue?
@@ -543,7 +543,7 @@ export default function HomePage() {
               </p>
             </div>
             {/* Panel — bleeds right */}
-            <div style={{
+            <div className="evidence-panel-r" style={{
               position: "absolute",
               left: "36%",
               top: 0,
@@ -629,7 +629,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           CORE CAPABILITIES
       ═══════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: slate50, padding: "96px 24px", borderTop: `1px solid ${slate200}`, borderBottom: `1px solid ${slate200}` }}>
+      <section className="mobile-pad" style={{ backgroundColor: slate50, padding: "96px 24px", borderTop: `1px solid ${slate200}`, borderBottom: `1px solid ${slate200}` }}>
         <div style={{ maxWidth: MAX_W, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "56px" }}>
             <SectionLabel>Core Capabilities</SectionLabel>
@@ -900,7 +900,7 @@ export default function HomePage() {
       {/* ═══════════════════════════════════════════════════════
           WHAT BUILDING PIPELINE ACTUALLY REQUIRES
       ═══════════════════════════════════════════════════════ */}
-      <section style={{ backgroundColor: slate900, padding: "96px 24px" }}>
+      <section className="mobile-pad" style={{ backgroundColor: slate900, padding: "96px 24px" }}>
         <div style={{ maxWidth: MAX_W, margin: "0 auto" }}>
           <div
             style={{
@@ -1030,6 +1030,7 @@ export default function HomePage() {
           FINAL CTA
       ═══════════════════════════════════════════════════════ */}
       <section
+        className="mobile-pad"
         style={{
           background: `linear-gradient(135deg, #360f5a 0%, #1e3a8a 100%)`,
           padding: "96px 24px",
