@@ -168,7 +168,7 @@ body {
   }
 
   /* Credentials bar */
-  .creds-row-1 { height: auto !important; overflow: visible !important; }
+  .creds-row-1 { display: none !important; }
   .creds-headshot-cell { display: none !important; }
 
   /* Insights hero grid */

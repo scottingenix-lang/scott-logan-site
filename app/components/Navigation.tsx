@@ -54,6 +54,7 @@ export default function Navigation() {
         {/* Logo / Name */}
         <Link
           href="/"
+          className="hidden md:block"
           style={{
             fontWeight: 700,
             fontSize: "20px",

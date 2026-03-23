@@ -501,7 +501,17 @@ export default function HomePage() {
 
           {/* Row 2 — LEFT panel (orange) */}
           <div className="evidence-row" style={{ position: "relative", minHeight: "480px", display: "flex", alignItems: "center", marginBottom: "56px" }}>
-            {/* Panel — bleeds left */}
+            {/* Text — right (placed first in DOM so it appears above panel on mobile) */}
+            <div className="evidence-text-right" style={{ marginLeft: "auto", flex: "0 0 36%", maxWidth: "460px", padding: "56px 0 56px 52px", zIndex: 1, position: "relative" }}>
+              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: accent, marginBottom: "14px" }}>ABM System</div>
+              <h3 style={{ fontSize: "clamp(20px, 2.2vw, 26px)", fontWeight: 800, color: slate900, letterSpacing: "-0.03em", lineHeight: "1.25", marginBottom: "16px" }}>
+                Are Your ABM Playbooks Converting?
+              </h3>
+              <p style={{ fontSize: "15px", color: slate600, lineHeight: "1.75" }}>
+                A connected system linking ICP targeting, webinars, website traffic, and AI content—automatically triggering sales outreach when engagement thresholds are met.
+              </p>
+            </div>
+            {/* Panel — bleeds left (absolutely positioned on desktop, flows after text on mobile) */}
             <div className="evidence-panel-l" style={{
               position: "absolute",
               right: "36%",
@@ -517,16 +527,6 @@ export default function HomePage() {
             }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/ABM-Engagement-Strategy.png" alt="ABM Engagement Strategy" style={{ width: "90%", borderRadius: "10px", boxShadow: "0 12px 40px rgba(0,0,0,0.35), 0 3px 8px rgba(0,0,0,0.2)", display: "block" }} />
-            </div>
-            {/* Text — right */}
-            <div className="evidence-text-right" style={{ marginLeft: "auto", flex: "0 0 36%", maxWidth: "460px", padding: "56px 0 56px 52px", zIndex: 1, position: "relative" }}>
-              <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: accent, marginBottom: "14px" }}>ABM System</div>
-              <h3 style={{ fontSize: "clamp(20px, 2.2vw, 26px)", fontWeight: 800, color: slate900, letterSpacing: "-0.03em", lineHeight: "1.25", marginBottom: "16px" }}>
-                Are Your ABM Playbooks Converting?
-              </h3>
-              <p style={{ fontSize: "15px", color: slate600, lineHeight: "1.75" }}>
-                A connected system linking ICP targeting, webinars, website traffic, and AI content—automatically triggering sales outreach when engagement thresholds are met.
-              </p>
             </div>
           </div>
 
