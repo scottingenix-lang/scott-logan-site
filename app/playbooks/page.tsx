@@ -196,7 +196,6 @@ export default function PlaybooksPage() {
                 backgroundColor: pb.featured ? slate900 : slate50,
                 borderRadius: "16px",
                 border: pb.featured ? `2px solid ${accent}` : `1px solid ${slate200}`,
-                overflow: "hidden",
                 position: "relative",
               }}
             >
